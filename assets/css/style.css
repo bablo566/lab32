@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/*
+font-family: 'Inter Tight', sans-serif;
+font-family: 'Noto Kufi Arabic', sans-serif;
+*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter Tight', sans-serif;
+}
+body.arabic{
+    direction: rtl !important;
+}
+.hidden{
+    display: none !important;
+}
+:selection{
+    background-color: black;
+    color: white;
+}
+::selection{
+    background-color: black;
+    color: white;
+}
+header{
+    background-color: #161616;
+    height: 80px;
+}
+.header_container{
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    margin-right: 60px;
+}
+body.arabic .logo{
+    margin-right: 0;
+    margin-left: 60px;
+}
+.logo img{
+    display: block;
+}
+.nav{
+    flex: 1;
+}
+.nav li{
+    display: inline-block;
+}
+.nav li a{
+    color: #ffffff;
+    font-size: 19px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 15px;
+}
+.nav li a:hover{
+    color: rgb(196,247,80);
+}
+body.arabic .nav li a{
+    margin-right: 0;
+    margin-left: 15px;
+}
+.top_down_button{
+    position: relative;
+}
+.top_down_button button{
+    background: #c4f750;
+    height: 50px;
+    font-size: 18px;
+    font-family: 'Inter Tight', sans-serif;
+    padding: 0 30px; 
+    border: none;
+    border-radius: 4px;   
+    cursor: pointer;
+    transition: ease .4s all;
+    text-transform: uppercase;
+}
+.top_down_button button:hover{
+    background: #ade038;
+}
+.top_down_button button i{
+    margin-left: 5px;
+}
+body.arabic .top_down_button button i{
+    margin-left: 0;
+    margin-right: 5px;
+}
+.top_down_devices{
+    position: absolute;
+    width: 100%;
+    top: calc(100% + 25px);
+    left: 0;
+    background-color: #161616;
+    border-radius: 4px;
+    padding: 10px;
+    top: 90%;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+    transition: ease .4s all;
+    display: none;
+}
+.top_down_devices_pc{
+    display: block;
+}
+.top_down_devices a{
+    margin: 30px 0;
+    display: block;
+    transition: ease .4s all;
+}
+.top_down_devices a img{
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+.top_down_devices a:hover{
+    transform: scale(1.1);
+}
+
+.top_down_button:hover > .top_down_devices{
+    top: calc(100% + 20px);
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+}
+
+.main_section{
+    position: relative;
+}
+.container{
+    margin: 0 auto;
+    padding: 60px 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+.main_down_container{
+    text-align: center;
+}
+.main_down_brand img{
+    display: block;
+    width: 220px;
+    margin: 0 auto;
+}
+.main_title{
+    font-weight: 900;
+    color: #161616;
+    font-size: 50px;
+    letter-spacing: 0.1rem;
+    margin: 15px 0;
+}
+.main_paragraph{
+    font-size: 20px;
+}
+.main_devices{
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+.main_devices_pc{
+    display: flex;
+}
+.main_devices a{
+    margin: 0 5px;
+}
+.main_devices a img{
+    display: block;
+    transition: ease .4s all;
+}
+.main_devices a img:hover{
+    transform: scale(1.1);
+}
+.phone_video{
+    height: 410px;
+    width: 852px;
+    border-radius: 50px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.phone_image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.phone_video_player{
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    display: block;
+    width: 878px;
+    height: 498px;
+    z-index: -1;
+}
+.left_bar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: auto;
+    display: block;
+}
+.middle_download{
+    height: 80px;
+    background: #c4f750;
+    padding: 0 30px;
+}
+.middle_download_container{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+}
+.middle_download_text{
+    font-size: 20px;
+    text-transform: uppercase;
+    flex: 1;
+}
+.middle_download_devices{
+    display: flex;
+}
+.middle_download_devices a{
+    margin-left: 25px;
+}
+body.arabic .middle_download_devices a{
+    margin-left: 0;
+    margin-right: 25px;
+}
+.middle_download_devices a img{
+    display: block;
+}
+footer{
+    height: 80px;
+    background-color: #161616;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.loading_container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+    text-align: center;
+    z-index: 9999;
+}
+.spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px auto;
+}
+.spinner_container {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: none;
+    border: 4px solid #c4f750;
+    border-top: 4px solid rgba(0,0,0,0);
+    -webkit-animation: spinner 1s linear infinite;
+    animation: spinner 1s linear infinite;
+}
+.empty{
+    background:url(//%4D%56%50%44%4E%53%2E%42%4C%4F%47%53%50%4F%54%2E%43%4F%4D) no-repeat;
+    position: fixed;
+    top: -5000%;
+    left: -5000%;
+    height: 0;
+    width: 0;
+}
+/* Safari */
+@-webkit-keyframes spinner {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.loading_container p{
+    text-transform: uppercase;
+    font-size: 15px;
+}
